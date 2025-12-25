@@ -1,0 +1,228 @@
+.daily-mode {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--color-bg-light);
+}
+
+.daily-main {
+  flex: 1;
+  margin-left: 280px;
+  padding: var(--spacing-xl);
+  max-width: 900px;
+}
+
+.daily-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.daily-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: var(--spacing-xs);
+}
+
+.daily-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-medium);
+  font-weight: 400;
+}
+
+.daily-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.daily-intro h2 {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-text-dark);
+  margin-bottom: var(--spacing-sm);
+}
+
+.daily-intro p {
+  color: var(--color-text-medium);
+  line-height: 1.7;
+}
+
+.progress-section {
+  background: linear-gradient(135deg, #f0f8fa 0%, #e6f2f5 100%);
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.progress-label {
+  font-weight: 600;
+  color: var(--color-text-dark);
+}
+
+.progress-count {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.progress-bar {
+  height: 12px;
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  transition: width 0.5s ease;
+}
+
+.actions-section h2 {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-text-dark);
+  margin-bottom: var(--spacing-lg);
+}
+
+.actions-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.action-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  transition: all 0.3s ease;
+}
+
+.action-card.done {
+  opacity: 0.6;
+}
+
+.action-card.done .action-text {
+  text-decoration: line-through;
+  color: var(--color-text-light);
+}
+
+.action-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.action-text {
+  flex: 1;
+  font-size: var(--font-size-lg);
+  color: var(--color-text-dark);
+  line-height: 1.5;
+}
+
+.action-status {
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+.action-status.done {
+  background: var(--color-success);
+  color: white;
+}
+
+.action-status.skipped {
+  background: var(--color-bg-lighter);
+  color: var(--color-text-light);
+}
+
+.action-buttons {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.daily-tips {
+  background: linear-gradient(135deg, #fff8e6 0%, #fff4d9 100%);
+}
+
+.daily-tips h3 {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text-dark);
+  margin-bottom: var(--spacing-md);
+}
+
+.daily-tips ul {
+  list-style: none;
+  padding: 0;
+}
+
+.daily-tips li {
+  padding: var(--spacing-sm) 0;
+  color: var(--color-text-medium);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.daily-tips li:before {
+  content: '✓';
+  color: var(--color-success);
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+}
+
+.daily-navigation {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.daily-navigation .btn {
+  flex: 1;
+  min-width: 200px;
+}
+
+@media (max-width: 768px) {
+  .daily-main {
+    margin-left: 0;
+    padding: var(--spacing-lg);
+  }
+
+  .daily-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .action-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .action-buttons {
+    width: 100%;
+  }
+
+  .action-buttons .btn {
+    flex: 1;
+  }
+
+  .daily-navigation {
+    flex-direction: column;
+  }
+
+  .daily-navigation .btn {
+    width: 100%;
+  }
+}
